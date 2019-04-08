@@ -2,11 +2,56 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Title of the document</title>
+    <title>Logint</title>
 </head>
 
 <body>
-Content of the document......
+    <p>Username</p>
+    <input type="text" name="username" id="username" placeholder="Username">
+    <p>Password</p>
+    <input type="password" name="password" id="password" placeholder="Password">
+    <br> <br>
+    <input type="button" name="button" id="button" onclick="login()" value="Submit">
+
+    <script>
+        function login(){
+            var username = document.getElementById("username");
+            var password = document.getElementById("password");
+            
+            if(username != "" && password!= ""){
+                if(username.value == password.value)
+                    alert("Contraseña correcta");
+                else
+                    alert("Contraseña incorrecta");
+            } else
+                alert("No ha introducido ningún dato");
+        }
+    </script>
+
+    <style>
+        body{
+            border: 5px lightcyan solid;
+        }
+        #username{
+            background: lightgrey;
+            font-family: Helvetica;
+            font-size: 18px;
+        }
+        #password{
+            background: lightgrey;
+            font-family: Helvetica;
+            font-size: 18px;
+        }
+
+        p{
+            font-family: Helvetica;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        #button{
+            background: lightgray;
+        }
+    </style>
 </body>
 
 </html>
